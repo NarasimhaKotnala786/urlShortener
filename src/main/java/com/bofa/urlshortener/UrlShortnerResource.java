@@ -18,30 +18,27 @@ public class UrlShortnerResource {
     @GetMapping("/{id}")
     public String getUrl(@PathVariable String id){
         String url = redisTemplate.opsForValue().get(id);
-        System.out.println("URL Retrieved: " + url);
         return url;
     }
 
     @PostMapping
-    public String create(@RequestBody String url){
+    public String create(@RequestBody String url)  {
+
+        String result = "";
 
         UrlValidator urlValidator = new UrlValidator(
                 new String[]{"http","https"}
         );
 
-        String id="";
-        //try {
         if (urlValidator.isValid(url)) {
-            id = Hashing.murmur3_32().hashString(url, StandardCharsets.UTF_8).toString();
-            System.out.println("URL Id generated: " + id);
+            String id = Hashing.murmur3_32().hashString(url, StandardCharsets.UTF_8).toString();
             redisTemplate.opsForValue().set(id, url);
-
+            result = id;
+        }else {
+            throw new RuntimeException("The URL is not valid. please enter a valid URL");
         }
-        //}catch (Exception ex){
-        //ex.printStackTrace();
-        //throw new RuntimeException("URL Invalid: " + url);
-        //}
-        return id;
+
+        return result;
 
     }
 
