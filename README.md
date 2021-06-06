@@ -60,6 +60,8 @@ HOW TO DEPLOY on AWS
 The current solutions runs as a standalone but this can be deployed on the cloud. Following are the instructions to deploy
 on AWS.
 
+First Redis needs to be installed on AWS EBS or EC2 instance. 
+
 1. Firstly the user needs to have an AWS account or Create a Free Tier AWS Account.
 2. Create a IAM user.
 3. Enable billing information.
@@ -80,6 +82,12 @@ Now build the application which will create the jar file target/urlShortener-0.0
 13. Rebuild the application with mvn clean install and execute the eb deploy command in order to deploy the application:    
 14. Terminate the environment.
     eb terminate urlShortener
+    
+ALTERNATIVE SOLUTION:
+=====================
+The most robust solution for this would be to deploy the SpringBoot application on AWS using Docker. Haven't provided this 
+due to shortage of time but can be done.
+
 
 
 
