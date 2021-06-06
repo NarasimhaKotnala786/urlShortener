@@ -55,6 +55,8 @@ Due to limited time this is the simplest solution. This can be enhanced to no en
 functionality can be achieved using various algorithms.Also unit testing has not been explored fully. Each HTTP method
 can be unit tested with more time.
 
+HOW TO DEPLOY on AWS
+=====================
 The current solutions runs as a standalone but this can be deployed on the cloud. Following are the instructions to deploy
 on AWS.
 
