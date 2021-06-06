@@ -31,14 +31,14 @@ How to run the application
 The above ways the Springboot application can be run.If the sprinboot application has started successfully then the following messages
 should be seen.
 
-2021-06-06 16:54:12.041  INFO 42816 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-06-06 16:54:12.058  INFO 42816 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-06-06 16:54:12.099  INFO 42816 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2021-06-06 16:54:19.320  INFO 42816 --- [           main] c.b.u.UrlShortenerApplicationTests       : Started UrlShortenerApplicationTests in 9.872 seconds (JVM running for 12.932)
-2021-06-06 16:54:19.325  INFO 42816 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
-2021-06-06 16:54:19.328  INFO 42816 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-06 16:54:12.041  INFO 42816 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!</br>
+2021-06-06 16:54:12.058  INFO 42816 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.</br>
+2021-06-06 16:54:12.099  INFO 42816 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.</br>
+2021-06-06 16:54:19.320  INFO 42816 --- [           main] c.b.u.UrlShortenerApplicationTests       : Started UrlShortenerApplicationTests in 9.872 seconds (JVM running for 12.932)</br>
+2021-06-06 16:54:19.325  INFO 42816 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT</br>
+2021-06-06 16:54:19.328  INFO 42816 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC</br>
 
-To test it a suitable REST Client is needed. Postman or Insomnia can be used.
+To test it a suitable REST Client is needed. Postman or Insomnia can be used.</br>
 
 For POST method the request has to be in the below format.
 ===========================================================
@@ -74,7 +74,7 @@ First Redis needs to be installed on AWS EBS or EC2 instance.
 10.Configure the EB CL</br>
 11.Deploy to AWS </br> 
    A few things are left to do before we can deploy the Spring Boot App to Elastic Beanstalk. The Elastic Beanstalk </br>
-   environments run an nginx instance on port 80 to proxy the actual application, running on port 5000. Therefore, </br>
+   environments run an nginx instance on port 80 to proxy the actual application, running on port 5000. Therefore, 
    we need to set the server port to port 5000 in the applications.properties file.</br>
     server.port=5000 </br>
 Now build the application which will create the jar file target/urlShortener-0.0.1-SNAPSHOT.jar:</br>
