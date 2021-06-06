@@ -87,8 +87,8 @@ Now build the application which will create the jar file target/urlShortener-0.0
     
 ALTERNATIVE SOLUTION: </br>
 =====================</br>
-The most robust solution for this would be to deploy the SpringBoot application on AWS using Docker. Haven't provided this</br> 
-due to shortage of time but can be done.
+The most robust solution for this would be to deploy the SpringBoot application on AWS using Docker. </br>
+Haven't provided this due to shortage of time but can be done.</br>
 
 
 
