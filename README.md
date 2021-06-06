@@ -62,30 +62,32 @@ on AWS.
 
 First Redis needs to be installed on AWS EBS or EC2 instance. 
 
-1. Firstly the user needs to have an AWS account or Create a Free Tier AWS Account.
-2. Create a IAM user.
-3. Enable billing information.
-4. Activate MFA (Multi-Factor Authentication) on Root Account
-5. Create Admin Account
-6. Apply IAM Password Policy
-7. Set a Budget
-8. Run the urlShortener SpringBoot app from the command line and see if it is up and running without any errors.
-9. Install and Configure EB CLI
-10.Configure the EB CL
-11.Deploy to AWS 
-   A few things are left to do before we can deploy the Spring Boot App to Elastic Beanstalk. The Elastic Beanstalk environments run an nginx instance on port 80 to proxy the actual application, running on port 5000. Therefore, we need to set the server port to port 5000 in the applications.properties file.
-    server.port=5000
-Now build the application which will create the jar file target/urlShortener-0.0.1-SNAPSHOT.jar:
-    $ mvn clean install
-12. Create AWS environment
-    eb create -s
-13. Rebuild the application with mvn clean install and execute the eb deploy command in order to deploy the application:    
-14. Terminate the environment.
-    eb terminate urlShortener
+1. Firstly the user needs to have an AWS account or Create a Free Tier AWS Account.</br>
+2. Create a IAM user.</br>
+3. Enable billing information.</br>
+4. Activate MFA (Multi-Factor Authentication) on Root Account</br>
+5. Create Admin Account</br>
+6. Apply IAM Password Policy</br>
+7. Set a Budget</br>
+8. Run the urlShortener SpringBoot app from the command line and see if it is up and running without any errors.</br>
+9. Install and Configure EB CLI</br>
+10.Configure the EB CL</br>
+11.Deploy to AWS </br> 
+   A few things are left to do before we can deploy the Spring Boot App to Elastic Beanstalk. The Elastic Beanstalk </br>
+   environments run an nginx instance on port 80 to proxy the actual application, running on port 5000. Therefore, </br>
+   we need to set the server port to port 5000 in the applications.properties file.</br>
+    server.port=5000 </br>
+Now build the application which will create the jar file target/urlShortener-0.0.1-SNAPSHOT.jar:</br>
+    $ mvn clean install </br>
+12. Create AWS environment </br>
+    eb create -s </br>
+13. Rebuild the application with mvn clean install and execute the eb deploy command in order to deploy the application:</br>    
+14. Terminate the environment.</br>
+    eb terminate urlShortener</br>
     
-ALTERNATIVE SOLUTION:
-=====================
-The most robust solution for this would be to deploy the SpringBoot application on AWS using Docker. Haven't provided this 
+ALTERNATIVE SOLUTION: </br>
+=====================</br>
+The most robust solution for this would be to deploy the SpringBoot application on AWS using Docker. Haven't provided this</br> 
 due to shortage of time but can be done.
 
 
